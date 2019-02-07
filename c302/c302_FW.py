@@ -109,7 +109,7 @@ def setup(parameter_set,
     amp = '4pA'
     dur = '250ms'
 
-    for stim_num in range(15):
+    for stim_num in range(8):
         for muscle_num in range(7):
             mdlx = 'MDL0%s' % (muscle_num + 1)
             mdrx = 'MDR0%s' % (muscle_num + 1)
@@ -144,7 +144,7 @@ def setup(parameter_set,
 
     i = start + 2 * d_v_delay
     j = start + 3 * d_v_delay
-    for pulse_num in range(1,15):
+    for pulse_num in range(1,8):
         input_list.append(('DB1', '%sms'%i, motor_dur, '3pA'))
         input_list.append(('VB1', '%sms'%j, motor_dur, '3pA'))
         i += d_v_delay * 2
